@@ -1,0 +1,44 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Feb 29, 2020 at 05:50 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.3
+--
+-- db
+--
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `matrimonial-db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `mob` int(10) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `email`, `mob`, `password`, `token`, `time`) VALUES
+(4, 'Sahabiya', 'admin@gmail.com', 2147483647, '0192023a7bbd73250516f069df18b500', '54631638203488229', '2020-01-28 21:25:30'),
+(6, 'Sahabiya', 'sss@gmail.com', 2147483647, '202cb962ac59075b964b07152d234b70', '54719474257708468', '2020-01-29 12:10:28'),
+(8, 'Sahabiya', 'sssiddique21@gmail.com', 2147483647, 'e01d4f676294f4bc4fc6c6441f2e7550', '54719460687810412', '2020-02-29 22:50:06');
